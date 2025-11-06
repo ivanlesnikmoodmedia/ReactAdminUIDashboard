@@ -4,7 +4,6 @@ import Products from "./pages/products/Products";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Menu from "./components/menu/Menu";
-import Login from "./pages/login/login";
 import "./styles/global.scss"
 
 
@@ -38,6 +37,10 @@ function App() {
       element: <Layout />,
       children: [
         {
+          path: "/",
+          element: <Home />
+        },
+        {
           path: "/home",
           element: <Home />  
         },
@@ -51,10 +54,6 @@ function App() {
         },
       ]
     },
-    {
-      path:"/login",
-      element: <Login/>
-    }
 
   ]);
 

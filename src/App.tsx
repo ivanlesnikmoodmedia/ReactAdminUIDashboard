@@ -10,6 +10,13 @@ import {
 } from "react-router-dom";
 function App() {
 
+  const Layout = ()=>{
+    return (
+      <div className="main">
+      </div>
+    )
+  }
+      
   const router = createBrowserRouter([
     {
       path: "/",
@@ -20,21 +27,17 @@ function App() {
     {
       path: "users",
       element: <Users/>,
-    }
+    },
     {
       path: "products",
       element: <Products/>,
     }
-  
-  
-  
-  
-  
+
   ]);
 
   return (
-    <div><Home/></div>
+    <RouterProvider router={router} />
   )
-}
+} 
 
 export default App

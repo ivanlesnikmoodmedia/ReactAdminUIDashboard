@@ -1,8 +1,15 @@
-import "./products.scss";
-const Products = () => {
-    return (
-        <div className="products">products</div>
-    );
-};
+import Single from "../../components/single/Single"
+import { singleProduct } from "../../data"
+import "./product.scss"
 
-export default Products;
+const Product = () => {
+
+  //Fetch data and send to Single Component
+  return (
+    <div className="product">
+       <Single {...singleProduct}/>
+    </div>
+  )
+}
+
+export default Product
